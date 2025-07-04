@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess My Number</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #52636b;
+        color: #eee;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      header {
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .between {
+        color: #bbb;
+        font-size: 1.2rem;
+      }
+
+      .number {
+        font-size: 6rem;
+        background-color: #eee;
+        color: #222;
+        width: 15rem;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 10px;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .left,
+      .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: #3e4a52;
+        padding: 1.5rem;
+        border-radius: 10px;
+      }
+
+      .guess {
+        font-size: 1.5rem;
+        width: 12rem;
+        padding: 0.5rem;
+        text-align: center;
+        border: 2px solid #60b347;
+        border-radius: 5px;
+      }
+
+      .btn {
+        font-size: 1.2rem;
+        padding: 0.7rem 2rem;
+        border: none;
+        background-color: #60b347;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #4e9e34;
+      }
+
+      .btn-again {
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        border: none;
+        background-color: #60b347;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s;
+        margin-bottom: 1rem;
+      }
+
+      .btn-again:hover {
+        background-color: #4e9e34;
+      }
+
+      .message {
+        font-size: 1.5rem;
+        min-height: 2rem;
+      }
+
+      .label-score,
+      .label-highscore {
+        font-size: 1.2rem;
+      }
+
+      footer {
+        margin-top: 2rem;
+        font-size: 1rem;
+        color: #bbb;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <h1>Guess My Number</h1>
+      <p class="between">(Between 1 and 20)</p>
+      <button class="btn-again">🔄 Again!</button>
+      <div class="number">?</div>
+    </header>
+
+    <main>
+      <section class="left">
+        <input type="number" class="guess" placeholder="Enter number" />
+        <button class="btn btn-check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Guess My Number Game</p>
+    </footer>
+
+    <script src="guess_no.js"></script>
+  </body>
+</html>
